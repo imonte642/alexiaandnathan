@@ -1,0 +1,57 @@
+body{
+    background: #F4F4F4;
+}
+
+.header{
+    font-size: 40px;
+}
+
+.container{
+    background: grey;
+    height: 100%;
+    width: 100%;
+}
+
+.footer{
+    background: bisque;
+    padding: 20px;
+}
+
+.overlayText{
+    font-family: "Goudy Old Style";
+    font-size: 100px;
+    width: 60%;
+}
+
+.footerImageContainer{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.footerImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); /* 45% black */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
