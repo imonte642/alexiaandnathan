@@ -1,5 +1,6 @@
 body{
     background: #F4F4F4;
+    font-family: "Garamond";
 }
 
 .header{
@@ -18,7 +19,6 @@ body{
 }
 
 .overlayText{
-    font-family: "Goudy Old Style";
     font-size: 100px;
     width: 60%;
 }
@@ -31,7 +31,7 @@ body{
     border-radius: 10px;
 }
 
-.footerImage{
+.footerImage, .slideshowImage{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -54,4 +54,27 @@ body{
     justify-content: center;
     text-align: center;
     color: white;
+}
+
+.headerText{
+    font-size: 60px;
+}
+
+.logo-nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 28px;
+  background:#DDC39A;
+}
+
+.logo{
+  color:#ffffff;
+  font-weight:700;
+}
+
+.links a{
+  margin-left:20px;
+  color: #e5e7eb;
+  text-decoration:none;
 }
