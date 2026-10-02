@@ -7,18 +7,37 @@
     <title>Alexia & Nathan</title>
 </head>
 <body>
-    <div class="logo-nav">
-        <div class="links">
-            <a class="headerText" href="index.html">Home</a>
+    <!-- The overlay -->
+    <div id="myNav" class="overlayMenu">
+        <!-- Button to close the overlay navigation -->
+        <a class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content-menu">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
         </div>
+    </div>
+
+    <!-- Use any element to open/show the overlay navigation menu -->
+<!--    <span class="menu-icon" onclick="openNav()">&#9776;</span>-->
+
+    <div class="logo-nav">
+        <span class="menu-icon" onclick="openNav()">&#9776;</span>
+<!--        <div class="links">-->
+<!--            <a class="headerText" href="index.html">Home</a>-->
+<!--        </div>-->
         <span class="logo">
              <a href="index.html">
                 <img style="width: 10vw" src="images/initials.svg" alt="Logo">
             </a>
         </span>
-        <div class="links">
-            <a class="headerText" href="page.html">Home</a>
-        </div>
+        <span></span>
+<!--        <div class="links">-->
+<!--            <a class="headerText" href="page.html">Home</a>-->
+<!--        </div>-->
     </div>
 
     <div class="elemSlideshowContainer">
