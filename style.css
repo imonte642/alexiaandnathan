@@ -192,3 +192,16 @@ body{
     background: #f1f1f1;
     padding: 20px 30px;
 }
+
+.elemTextContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    align-self: center;
+    gap: 30px;
+}
+
+.elemDetailsText{
+    margin: 0;
+}
