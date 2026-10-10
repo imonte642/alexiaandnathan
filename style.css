@@ -205,3 +205,8 @@ body{
 .elemDetailsText{
     margin: 0;
 }
+
+.elemContentContainer{
+    display: flex;
+    flex-direction: row;
+}
