@@ -260,3 +260,11 @@ main {
         min-height: 280px;
     }
 }
+
+.mapButton{
+    background: #DDC39A;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
