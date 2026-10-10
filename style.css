@@ -1,6 +1,18 @@
+html, body {
+    margin: 0;
+    min-height: 100%;
+}
+
 body{
     background: #F4F4F4;
     font-family: "Garamond";
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 .header{
@@ -186,11 +198,14 @@ body{
     color: #ffffff;
 }
 
-.elemContentTextContainer{
+.elemContentImageContainer,
+.elemContentTextContainer {
+    flex: 1;
+    min-width: 0;
+}
+
+.elemContentImageContainer{
     display: flex;
-    justify-content: space-between;
-    background: #f1f1f1;
-    padding: 20px 30px;
 }
 
 .elemTextContainer{
@@ -202,11 +217,46 @@ body{
     gap: 30px;
 }
 
-.elemDetailsText{
+.textContent, .textHeader{
     margin: 0;
+}
+
+.textHeader{
+    font-size: 40px;
+}
+
+.textContent{
+    font-size: 22px;
 }
 
 .elemContentContainer{
     display: flex;
-    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+}
+
+.elemMainContainer{
+    padding: 30px;
+}
+
+.elemImages{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.elemContentTextContainer {
+    justify-content: center;
+    display: flex;
+}
+
+@media (max-width: 700px) {
+    .elemContentContainer {
+        flex-direction: column;
+    }
+
+    .elemContentImageContainer {
+        min-height: 280px;
+    }
 }
