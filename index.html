@@ -7,21 +7,20 @@
     <title>Alexia & Nathan</title>
 </head>
 <body>
-    <!-- The overlay -->
+
+    <!-- Overlay menu -->
     <div id="myNav" class="overlayMenu">
         <!-- Button to close the overlay navigation -->
         <a class="closebtn" onclick="closeNav()">&times;</a>
 
         <!-- Overlay content -->
         <div class="overlay-content-menu">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            <a class="nav-overlay-menu-text" href="/ourstory.html">Our Story</a>
+            <a class="nav-overlay-menu-text" href="faq.html">Q & A</a>
         </div>
     </div>
 
-
+    <!-- Navbar -->
     <div class="logo-nav">
         <span class="menu-icon" onclick="openNav()">&#9776;</span>
         <span class="logo">
@@ -32,6 +31,7 @@
         <span></span>
     </div>
 
+    <!-- Image showcase animation -->
     <div class="elemSlideshowContainer">
         <div class="mySlides fade">
             <img class="slideshowImage" src="images/img_1.jpg" alt="slideshowImg1">
@@ -59,7 +59,9 @@
         <span class="dot"></span>
     </div>
 
+    <!-- Page content -->
     <div class="elemMainContainer">
+        <!-- Ceremony container -->
         <div class="elemContentContainer">
             <div class="elemContentImageContainer">
                 <img class="elemImages" src="images/img_5_sq.jpg" alt="rec">
@@ -83,6 +85,7 @@
             </div>
         </div>
 
+        <!-- Reception container -->
         <div class="elemContentContainer" style="margin-top: 30px;">
             <div class="elemContentImageContainer">
                 <img class="elemImages" src="images/img_3_sq.jpg" alt="rec">
@@ -107,16 +110,23 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
         <div class="footerImageContainer">
           <img class="footerImage" src="images/img_10.jpg" alt="Background image">
 
-          <div class="overlay">
+          <div class="overlay-footer">
             <div class="overlay-content">
-              <p class="overlayText">Celebrate our Special Day with us</p>
+              <p class="overlayText">Celebrate our special day with us</p>
             </div>
           </div>
         </div>
+
+        <div class="footer-navigation">
+            <a class="footer-navigation-links" href="/index.html">Home page</a>
+            <a class="footer-navigation-links" href="/ourstory.html">Our Story</a>
+            <a class="footer-navigation-links" href="/faq.html">FAQ</a>
+          </div>
     </div>
 </body>
 </html>
