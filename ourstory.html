@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="style.css">
+
 <head>
     <meta charset="UTF-8">
     <title>Alexia & Nathan</title>
 </head>
+
 <body>
     <!-- Overlay menu -->
     <div id="myNav" class="overlayMenu">
@@ -22,7 +24,7 @@
     <div class="logo-nav">
         <span class="menu-icon" onclick="openNav()">&#9776;</span>
         <span class="logo">
-             <a href="index.html">
+            <a href="index.html">
                 <img style="width: 10vw" src="images/initials.svg" alt="Logo">
             </a>
         </span>
@@ -42,4 +44,17 @@
         </div>
     </div>
 </body>
+
+<script>
+    /* Open menu */
+    function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+    }
+
+    /* Close menu */
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+    }
+</script>
+
 </html>
