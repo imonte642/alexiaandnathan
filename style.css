@@ -1,9 +1,10 @@
-html, body {
+html,
+body {
     margin: 0;
 }
 
-body{
-    background: #EFEFEF;
+body {
+    background: #F8F8F8;
     font-family: "Garamond";
     min-height: 100vh;
     display: flex;
@@ -11,37 +12,38 @@ body{
     color: #181818;
 }
 
-.header{
+.header {
     font-size: 40px;
 }
 
-.container{
+.container {
     background: grey;
     height: 100%;
     width: 100%;
 }
 
 /* Footer */
-.footer{
+.footer {
     background: #ddc39a9d;
     padding: 20px;
 }
 
-.footerImageContainer{
+.footerImageContainer {
     position: relative;
     width: 100%;
     height: clamp(240px, 70vh, 700px);
     overflow: hidden;
 }
 
-.footerImage, .slideshowImage{
+.footerImage,
+.slideshowImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.overlay-footer{
+.overlay-footer {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.20);
@@ -51,7 +53,7 @@ body{
     justify-content: center;
 }
 
-.footer-navigation{
+.footer-navigation {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,11 +62,11 @@ body{
     padding: 30px;
 }
 
-.footer-navigation a{
+.footer-navigation a {
     color: white;
 }
 
-.footer-navigation-links{
+.footer-navigation-links {
     font-size: 38px;
     text-decoration: underline;
 }
@@ -73,14 +75,15 @@ body{
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45); /* 45% black */
+    background: rgba(0, 0, 0, 0.45);
+    /* 45% black */
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.overlayText{
+.overlayText {
     font-size: clamp(2.5rem, 8vw, 6.25rem);
     width: min(90%, 700px);
     margin: 0;
@@ -111,45 +114,55 @@ body{
 
 /* Position the content inside the overlay */
 .overlay-content-menu {
-  position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
 /* The navigation links inside the overlay */
 .overlayMenu a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 50px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+    padding: 8px;
+    text-decoration: none;
+    font-size: 50px;
+    color: #818181;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
 }
 
 /* When you mouse over the navigation links, change their color */
-.overlayMenu a:hover, .overlayMenu a:focus {
-  color: #DDC39A;
+.overlayMenu a:hover,
+.overlayMenu a:focus {
+    color: #DDC39A;
 }
 
 /* Position the close button (top right corner) */
 .overlayMenu .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 0;
-  left: 20px;
-  font-size: 60px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 20px;
+    font-size: 60px;
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
-  .overlayMenu a {font-size: 20px}
-  .overlayMenu .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
+    .overlayMenu a {
+        font-size: 20px
+    }
+
+    .overlayMenu .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }
 
 .menu-icon {
@@ -163,34 +176,36 @@ body{
     color: #ffffff;
 }
 
-.headerText{
+.headerText {
     font-size: 60px;
 }
 
-.logo-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 28px;
-  background-color:#EFEFEF;
+.logo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 28px;
+    background-color: #EFEFEF;
 }
 
-.logo{
-  color:#ffffff;
-  font-weight:700;
+.logo {
+    color: #ffffff;
+    font-weight: 700;
 }
 
-.links a{
-  margin-left:20px;
-  color: #DDC39A;
-  text-decoration:none;
+.links a {
+    margin-left: 20px;
+    color: #DDC39A;
+    text-decoration: none;
 }
 
 /* Image Slideshow */
-.mySlides {display: none;}
+.mySlides {
+    display: none;
+}
 
 /* Slideshow container */
-.elemSlideshowContainer{
+.elemSlideshowContainer {
     max-width: 1000px;
     position: relative;
     margin: auto;
@@ -198,22 +213,29 @@ body{
 
 /* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 2.5s;
+    animation-name: fade;
+    animation-duration: 2.5s;
 }
 
 @keyframes fade {
-  from {opacity: 0.2}
-  to {opacity: 1}
+    from {
+        opacity: 0.2
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .elemSlideShowOverlayText {font-size: 11px}
+    .elemSlideShowOverlayText {
+        font-size: 11px
+    }
 }
 
 /* Slideshow Overlay Text */
-.elemSlideshowOverlayTextContainer{
+.elemSlideshowOverlayTextContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,7 +244,7 @@ body{
     color: white;
 }
 
-.elemSlideShowOverlayText{
+.elemSlideShowOverlayText {
     font-size: 70px;
     width: 70%;
 }
@@ -233,12 +255,12 @@ body{
     min-width: 0;
 }
 
-.elemContentImageContainer{
+.elemContentImageContainer {
     display: flex;
     justify-content: center;
 }
 
-.elemTextContainer{
+.elemTextContainer {
     display: flex;
     margin: 40px 0;
     flex-direction: column;
@@ -248,30 +270,31 @@ body{
     gap: 30px;
 }
 
-.textContent, .textHeader{
+.textContent,
+.textHeader {
     margin: 0;
 }
 
-.textHeader{
+.textHeader {
     font-size: 64px;
 }
 
-.textContent{
+.textContent {
     font-size: 40px;
 }
 
-.elemContentContainer{
+.elemContentContainer {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     width: 100%;
 }
 
-.elemMainContainer{
+.elemMainContainer {
     padding: 30px;
 }
 
-.elemImages{
+.elemImages {
     display: block;
     width: 100%;
     height: 100%;
@@ -289,11 +312,128 @@ body{
     }
 }
 
-.mapButton{
+.mapButton {
     background: #DDC39A;
     border: none;
     padding: 14px 50px;
     border-radius: 4px;
     font-size: 20px;
     color: white;
+}
+
+/* Accordion */
+.accordion {
+    max-width: 640px;
+    margin: 0 auto;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    overflow: hidden;
+}
+
+.accordion-item+.accordion-item {
+    border-top: 1px solid var(--line);
+}
+
+.accordion-header {
+    margin: 0;
+}
+
+.accordion-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.accordion-button:hover {
+    background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+
+.accordion-button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+}
+
+/* Plus icon built from two bars */
+.icon {
+    position: relative;
+    flex: none;
+    width: 18px;
+    height: 18px;
+}
+
+.icon::before,
+.icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    margin-top: -1px;
+    border-radius: 2px;
+    background: var(--accent);
+    transition: transform 0.3s ease;
+}
+
+.icon::after {
+    transform: rotate(90deg);
+}
+
+/* vertical bar */
+
+/* Open state: vertical bar rotates flat to become a minus */
+.accordion-button[aria-expanded="true"] .icon::after {
+    transform: rotate(0deg);
+}
+
+.accordion-button[aria-expanded="true"] .icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+/* Smooth height animation using grid rows */
+.accordion-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.accordion-panel.open {
+    grid-template-rows: 1fr;
+}
+
+.accordion-panel>div {
+    overflow: hidden;
+}
+
+.accordion-content {
+    padding: 0 20px 20px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .icon,
+    .icon::before,
+    .icon::after,
+    .accordion-panel {
+        transition: none;
+    }
 }
