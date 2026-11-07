@@ -3,15 +3,13 @@
 <link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
+    <script src="navigation.js" defer></script>
     <title>Alexia & Nathan</title>
 </head>
 <body>
 
     <!-- Overlay menu -->
     <div id="myNav" class="overlayMenu">
-        <!-- Button to close the overlay navigation -->
-        <a class="closebtn" onclick="closeNav()">&times;</a>
-
         <!-- Overlay content -->
         <div class="overlay-content-menu">
             <a class="nav-overlay-menu-text" href="index.html" aria-current="page">Home</a>
@@ -22,7 +20,9 @@
 
     <!-- Navbar -->
     <div class="logo-nav">
-        <span class="menu-icon" onclick="openNav()">&#9776;</span>
+        <button class="menu-icon" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="myNav">
+            <span></span><span></span><span></span>
+        </button>
         <span class="logo">
              <a href="index.html">
                 <img style="width: 10vw" src="images/initials.svg" alt="Logo">
@@ -119,21 +119,21 @@
                     <img class="timeline-image" src="images/welcomedrink.svg" alt="">
                     <div class="timeline-details">
                         <h3>Welcome drink</h3>
-                        <time datetime="2027-04-03T18:30" style="font-weight: 600;">18:30</time>
+                        <time datetime="2027-04-03T18:30">18:30</time>
                     </div>
                 </li>
                 <li class="timeline-event">
                     <img class="timeline-image" src="images/cake.svg" alt="">
                     <div class="timeline-details">
                         <h3>Cake cutting</h3>
-                        <time datetime="2027-04-03T20:30" style="font-weight: 600;">20:30</time>
+                        <time datetime="2027-04-03T20:30">20:30</time>
                     </div>
                 </li>
                 <li class="timeline-event">
                     <img class="timeline-image" src="images/firstdance.svg" alt="">
                     <div class="timeline-details">
                         <h3>First dance</h3>
-                        <time datetime="2027-04-03T21:00" style="font-weight: 600;">21:00</time>
+                        <time datetime="2027-04-03T21:00">21:00</time>
                     </div>
                 </li>
                 <li class="timeline-event">
@@ -195,14 +195,6 @@ function showSlides() {
 	setTimeout(showSlides, 5000); // Change image every 8 seconds
 }
 
-/* Open menu */
-function openNav() {
-	document.getElementById("myNav").style.height = "100%";
-}
 
-/* Close menu */
-function closeNav() {
-	document.getElementById("myNav").style.height = "0%";
-}
 </script>
 </html>

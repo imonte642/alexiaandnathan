@@ -3,6 +3,25 @@ body {
     margin: 0;
 }
 
+.scroll-reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-reveal-pending {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 body {
     background: #F8F8F8;
     font-family: "Garamond";
@@ -172,10 +191,37 @@ body {
 }
 
 .menu-icon {
-    font-size: 60px;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: 0;
+    background: transparent;
     cursor: pointer;
     color: #DDC39A;
     user-select: none;
+}
+
+.menu-icon span {
+    position: absolute;
+    left: 10px;
+    top: 28px;
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+    background: currentColor;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.menu-icon span:first-child { transform: translateY(-12px); }
+.menu-icon span:last-child { transform: translateY(12px); }
+.menu-icon.is-open span:first-child { transform: rotate(45deg); }
+.menu-icon.is-open span:nth-child(2) { opacity: 0; }
+.menu-icon.is-open span:last-child { transform: rotate(-45deg); }
+
+.menu-icon:focus-visible {
+    outline: 2px solid #947044;
+    outline-offset: 4px;
 }
 
 .menu-icon:hover {
@@ -187,16 +233,45 @@ body {
 }
 
 .logo-nav {
-    display: flex;
-    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 18px 28px;
     background-color: #EFEFEF;
+    transition: transform 0.25s ease;
+}
+
+.logo-nav.nav-hidden {
+    transform: translateY(-100%);
+}
+
+.logo-nav:focus-within {
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo-nav,
+    .menu-icon span {
+        transition: none;
+    }
 }
 
 .logo {
+    justify-self: center;
     color: #ffffff;
     font-weight: 700;
+}
+
+.logo-nav .menu-icon {
+    justify-self: start;
+}
+
+.logo img {
+    display: block;
 }
 
 .links a {
@@ -365,7 +440,7 @@ body {
     height: 18px;
     border: 3px solid #DDC39A;
     border-radius: 50%;
-    background: #F8F8F8;
+    background: #DDC39A;
     transform: translate(-50%, -50%);
 }
 
