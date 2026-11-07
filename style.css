@@ -103,7 +103,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 16px;
     padding: 24px 12px;
 }
 
@@ -555,10 +554,10 @@ body {
     border: none;
     min-height: 48px;
     max-width: 100%;
-    padding: 14px 32px;
+    padding: 10px 24px;
     cursor: pointer;
     border-radius: 4px;
-    font-size: 20px;
+    font-size: 16px;
     color: white;
 }
 
