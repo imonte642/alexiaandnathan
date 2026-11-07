@@ -143,6 +143,12 @@ body {
     color: #DDC39A;
 }
 
+/* Keep the current page highlighted, including on hover and focus. */
+.overlayMenu a[aria-current="page"] {
+    color: #DDC39A;
+    font-weight: 700;
+}
+
 /* Position the close button (top right corner) */
 .overlayMenu .closebtn {
     position: absolute;
@@ -288,6 +294,139 @@ body {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
+}
+
+.celebration-divider {
+    width: min(80%, 900px);
+    margin: 60px auto 0;
+    border: 0;
+    border-top: 1px solid #DDC39A;
+}
+
+.elemCelebContinues{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 60px 0;
+    gap: 40px;
+}
+
+.elemCelebContinues > .textHeader {
+    font-size: clamp(32px, 6vw, 64px);
+    font-weight: 400;
+    text-align: center;
+}
+
+.celebration-timeline {
+    width: min(100%, 900px);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.timeline-event {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    column-gap: 80px;
+    min-height: 260px;
+    padding: 20px 0;
+}
+
+/* Each segment joins the centres of consecutive event circles. */
+.timeline-event::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #DDC39A;
+    transform: translateX(-50%);
+}
+
+.timeline-event:first-child::before {
+    top: 50%;
+}
+
+.timeline-event:last-child::before {
+    bottom: 50%;
+}
+
+.timeline-event::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #DDC39A;
+    border-radius: 50%;
+    background: #F8F8F8;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-image {
+    width: min(100%, 220px);
+    justify-self: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.timeline-details {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+}
+
+.timeline-details h3 {
+    margin: 0 0 8px;
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 400;
+}
+
+.timeline-details time {
+    font-size: clamp(24px, 3.5vw, 36px);
+    color: #947044;
+}
+
+.timeline-event:nth-child(even) .timeline-image {
+    grid-column: 2;
+}
+
+.timeline-event:nth-child(even) .timeline-details {
+    grid-column: 1;
+}
+
+@media (max-width: 600px) {
+    .timeline-event {
+        grid-template-columns: 30px minmax(0, 1fr);
+        column-gap: 20px;
+        row-gap: 12px;
+        min-height: 0;
+        padding: 24px 0;
+    }
+
+    .timeline-event::before,
+    .timeline-event::after {
+        left: 15px;
+    }
+
+    .timeline-event .timeline-image,
+    .timeline-event:nth-child(even) .timeline-image {
+        grid-column: 2;
+        grid-row: 1;
+        width: 120px;
+    }
+
+    .timeline-event .timeline-details,
+    .timeline-event:nth-child(even) .timeline-details {
+        grid-column: 2;
+        grid-row: 2;
+    }
 }
 
 .elemMainContainer {
