@@ -84,12 +84,18 @@
         });
     }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
 
+    const pending = [];
     targets.forEach((element) => {
         // Leave content already on screen visible on load or restored scroll.
         if (element.getBoundingClientRect().top < window.innerHeight) return;
         element.classList.add('scroll-reveal');
         element.classList.add('scroll-reveal-pending');
-        observer.observe(element);
+        pending.push(element);
+    });
+
+    // Paint the initial state before observing, including on mobile browsers.
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => pending.forEach((element) => observer.observe(element)));
     });
 
     // Keyboard navigation must reveal focused controls immediately.
@@ -98,9 +104,14 @@
         if (element) reveal(element);
     });
 
-    reducedMotion.addEventListener('change', (event) => {
+    const onMotionChange = (event) => {
         if (!event.matches) return;
         targets.forEach(reveal);
         observer.disconnect();
-    });
+    };
+    if (reducedMotion.addEventListener) {
+        reducedMotion.addEventListener('change', onMotionChange);
+    } else if (reducedMotion.addListener) {
+        reducedMotion.addListener(onMotionChange);
+    }
 })();
